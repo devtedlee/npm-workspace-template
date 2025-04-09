@@ -1,0 +1,53 @@
+{
+  "name": "npm-workspace-template",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:learner": "cd packages/learner && vite",
+    "dev:lecturer": "cd packages/lecturer && vite",
+    "build:learner": "cd packages/learner && vite build",
+    "build:lecturer": "cd packages/lecturer && vite build",
+    "lint:learner": "cd packages/learner && eslint \"src/**/*.{ts,tsx}\"",
+    "lint:lecturer": "cd packages/lecturer && eslint \"src/**/*.{ts,tsx}\"",
+    "preview:learner": "cd packages/learner && vite preview",
+    "preview:lecturer": "cd packages/lecturer && vite preview",
+    "lint": "eslint \"packages/**/*.{ts,tsx}\"",
+    "lint:fix": "eslint \"packages/**/*.{ts,tsx}\" --fix",
+    "storybook:shared": "cd packages/shared && storybook dev",
+    "storybook:learner": "cd packages/learner && storybook dev",
+    "storybook:lecturer": "cd packages/lecturer && storybook dev"  
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.1",
+    "@types/react-dom": "^18.3.1",
+    "@typescript-eslint/eslint-plugin": "^7.15.0",
+    "@typescript-eslint/parser": "^7.15.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.19",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin": "^1.0.1",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-react": "^7.35.0",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-react-refresh": "^0.4.7",
+    "@storybook/addon-essentials": "^8.2.8",
+    "@storybook/addon-interactions": "^8.2.8",
+    "@storybook/addon-links": "^8.2.8",
+    "@storybook/addon-onboarding": "^8.2.8",
+    "@storybook/blocks": "^8.2.8",
+    "@storybook/react": "^8.2.8",
+    "@storybook/react-vite": "^8.2.8",
+    "@storybook/test": "^8.2.8",
+    "storybook": "^8.2.8",
+    "eslint-plugin-storybook": "^0.8.0",
+    "postcss": "^8.4.39",
+    "tailwindcss": "^3.4.10",
+    "typescript": "^5.8.3",
+    "vite": "^6.2.0"
+  }
+}
